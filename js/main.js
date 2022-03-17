@@ -153,10 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function clearBoard() {
-    for (let i = 0; i < 30; i++) {
-      let square = document.getElementById(i + 1);
-      square.textContent = "";
-    }
+    //for (let i = 0; i < 30; i++) {
+    //  let square = document.getElementById(i + 1);
+    //  square.textContent = "";
+    //}
 
     const keys = document.getElementsByClassName("keyboard-button");
 
@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
           updateTotalGames();
           window.localStorage.setItem("lastDate", today);
           window.localStorage.setItem("finished", 1);
-          window.location.href = "https://s324-stonybrookbands.shopwindow.me/sosb-spring-concert-2022";
+          showStatsModal();
           return;
         }, 1200);
       }
@@ -293,6 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
           updateTotalGames();
           window.localStorage.setItem("lastDate", today);
           window.localStorage.setItem("finished", 2);
+          showStatsModal();
           return;
         }, 1200);
       }
@@ -368,6 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+
   function updateStatsModal() {
     const currentStreak = window.localStorage.getItem("currentStreak");
     const totalWins = window.localStorage.getItem("totalWins");
@@ -379,6 +381,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const winPct = Math.round((totalWins / totalGames) * 100) || 0;
     document.getElementById("win-pct").textContent = winPct;
+  }
+
+  function showStatsModal() {
+    const modal = document.getElementById("stats-modal");
+    updateStatsModal();
+    modal.style.display = "block";
   }
 
   function initStatsModal() {
@@ -447,10 +455,10 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
         
-        message +="\nGet your tickets to the Spirit of Stony Brook's Spring Concert!"
+        message +="\nPlay Bandle and get your tickets to the Spirit of Stony Brook's Spring Concert at stonybrook.edu/band!"
         navigator.share({
           title: "Share today's Bandle Result!",
-          url: 'https://bit.ly/sosbconcert2022',
+          url: 'https://SBUMarchingBand.github.io/BandWordle/',
           text: message
         }).then(() => {
           console.log('Thanks for sharing!');
