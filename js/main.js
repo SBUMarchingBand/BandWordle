@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let year = date.getFullYear();
   let today = `${month}.${day}.${year}`;
 
-  const words = ["sweet", "onion", "shoes", "heavy", "couch", "anger", "chest", "owner","pilot", "shape", "learn","shoes", "union", "exist", "whole", "fault", "empty", "shoes", "prior", "serve", "under", "fresh", "loose","urban", "climb", "aloof","aloft", "havoc", "drama","video", "frame", "judge","civil", "false", "prime","flute", "share", "begin","trial", "draft", "youth"];
+  const words = ['March','Brass','Pitch','Spats','Flute','Drums','Stick','Baton','Shako','Glove','Flags','Guard','Vibes','Bones','Horns','Saxes','Sousa','Altos','Tenor','Mello','Baris','Snare','Crash','Plume','Pants','Fifth','Pride','Field','Grass','Arena','Court','Twirl','Hoops','Steps','Fight','Songs','Major','Minor','Block','Drill','Stony','Brook','Lizzo','Silks','Flair','Music','Notes','Beats','April','Sheet','Sandy','Shore','Maces'];
   let currentWord = words[currentWordIndex];
 
 
