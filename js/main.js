@@ -455,10 +455,10 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
         
-        message +="\nPlay Bandle and get your tickets to the Spirit of Stony Brook's Spring Concert at stonybrook.edu/band!"
+        message +="\nPlay Bandle! Get your tickets to the Spirit of Stony Brook's Spring Concert at bit.ly/sbuconcert2022\n"
         navigator.share({
           title: "Share today's Bandle Result!",
-          url: 'https://sbumarchingband.github.io/BandWordle/',
+          url: 'https://bit.ly/sbubandle',
           text: message
         }).then(() => {
           console.log('Thanks for sharing!');
