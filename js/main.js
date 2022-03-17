@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // also in local storage
   let guessedWordCount = 0;
+  let guessedWordCountshare = "X";
   let availableSpace = 1;
   let guessedWords = [[]];
 
@@ -41,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     guessedWordCount =
       Number(window.localStorage.getItem("guessedWordCount")) ||
       guessedWordCount;
+    guessedWordCountshare =
+      Number(window.localStorage.getItem("guessedWordCountshare")) ||
+      guessedWordCountshare;  
     availableSpace =
       Number(window.localStorage.getItem("availableSpace")) || availableSpace;
     guessedWords =
@@ -77,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function resetGameState() {
     window.localStorage.removeItem("guessedWordCount");
+    window.localStorage.removeItem("guessedWordCountshare");
     window.localStorage.removeItem("guessedWords");
     window.localStorage.removeItem("keyboardContainer");
     window.localStorage.removeItem("boardContainer");
@@ -276,6 +281,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (guessedWord === currentWord) {
         setTimeout(() => {
+          guessedWordCountshare = String(guessedWordCount)
+          window.localStorage.setItem("guessedWordCountshare", guessedWordCountshare);
           clearBoard();
           showResult();
           incrementStreak();
@@ -289,6 +296,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (guessedWords.length === 6 && guessedWord !== currentWord) {
         setTimeout(() => {
+          guessedWordCountshare = "X"
+          window.localStorage.setItem("guessedWordCountshare", guessedWordCountshare);
           clearBoard();
           showLosingResult();
           resetStreak();
@@ -422,7 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     shareButton.addEventListener('click', event => {
       if (navigator.share) {
-        let message = "SOSB Bandle "+today+": "+guessedWordCount+"/6\n\n";
+        let message = "SOSB Bandle "+today+": "+guessedWordCountshare+"/6\n\n";
         
         for (let i = 0; i < (guessedWordCount*5); i++) {
           let className = document.getElementById(i+1).className;
