@@ -1,10 +1,23 @@
 html,
 body {
   height: 100%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  font-size: 2.3rem;
+  font-weight:900;
+  text-align: center;
+}
+
+h3 {
+  font-weight:700;
+}
+
+h4, h5, h6 {
+  font-weight:300;
 }
 
 #container {
@@ -265,7 +278,7 @@ svg {
   margin-right: 7px;
 }
 
-button, .button {
+button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -282,7 +295,6 @@ button, .button {
   text-decoration: none;
   white-space: nowrap;
   border-radius: 4px;
-  border: 2px solid #990000;
   cursor: pointer;
 }
 
@@ -291,6 +303,11 @@ button:hover, .button:hover {
 }
 
 .share-button, .copy-link {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.next-button, .copy-link {
   padding-left: 30px;
   padding-right: 30px;
 }
