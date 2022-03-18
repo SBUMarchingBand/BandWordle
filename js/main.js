@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
           method: "GET",
           headers: {
             "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-            "x-rapidapi-key": "323ee26243msh74523e3454fb994p1e03fajsn118fa57b0f00",
+            "x-rapidapi-key": "59cb132ce2msh8ff017689aa3828p1f0a65jsna5daf38e4182",
           },
         }
       );
