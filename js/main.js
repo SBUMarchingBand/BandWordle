@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let guessedWords = [[]];
 
   let date = new Date();
-  let baseDate = new Date("03/17/2022");
+  let baseDate = new Date("03/21/2022");
   let Difference_In_Time = date.getTime() - baseDate.getTime();
   let currentWordIndex = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
   let day = date.getDate();
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let year = date.getFullYear();
   let today = `${month}.${day}.${year}`;
 
-  const wordscasesens = ['March','Brass','Pitch','Spats','Flute','Drums','Stick','Baton','Shako','Glove','Flags','Guard','Vibes','Bones','Horns','Saxes','Sousa','Altos','Tenor','Mello','Baris','Snare','Crash','Plume','Pants','Fifth','Pride','Field','Grass','Arena','Court','Twirl','Hoops','Steps','Fight','Songs','Major','Minor','Block','Drill','Stony','Brook','Lizzo','Silks','Flair','Music','Notes','Beats','April','Sheet','Sandy','Shore','Maces'];
+  const wordscasesens = ["Brass","Arena","Steps","Beats","Fight","Snare","Pride","March","Stick","April","Notes","Fifth","Music","Flags","Guard","Shore","Stony","Baton","Twirl","Drill","Major","Flute","Brook","Sandy","Crash","Crowd","Songs","Minor","Horns","Pitch","Vibes","Drums","Today"];
   const words = wordscasesens.map(element => {
     return element.toLowerCase();
   });
