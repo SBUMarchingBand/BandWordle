@@ -431,7 +431,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     shareButton.addEventListener('click', event => {
       if (navigator.share) {
-        let message = "SOSB Bandle "+today+": "+guessedWordCountshare+"/6\n\n";
+        let message = "SOSB Bandle "+currentWordIndex+": "+guessedWordCountshare+"/6\n\n";
         
         for (let i = 0; i < (guessedWordCount*5); i++) {
           let className = document.getElementById(i+1).className;
